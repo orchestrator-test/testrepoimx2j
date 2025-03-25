@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: testrepoimx2j
+  description: testrepoimx2j description
+  annotations:
+    argocd/app-selector: rht-gitops.com/janus-argocd=testrepoimx2j
+    backstage.io/kubernetes-namespace: orchestrator-gitops
+    backstage.io/kubernetes-id: testrepoimx2j-ci
+    janus-idp.io/tekton: testrepoimx2j
+    github.com/project-slug: orchestrator-test/testrepoimx2j
+    gitlab.com/project-slug: orchestrator-test/testrepoimx2j
+spec:
+  type: workflow-project
+  system: system:default/janus-orchestrator
+  lifecycle: development
+  owner: user:default/guest
